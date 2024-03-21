@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script>
+        function display1() {
+            var fileInput = document.getElementById('file-input');
+            var img2 = document.getElementById('img2');
+            var reader = new FileReader();
+
+            reader.onload = function() {
+                img2.style.backgroundImage = "url('" + reader.result + "')";
+            };
+
+            reader.readAsDataURL(fileInput.files[0]);
+            const inputText = document.getElementById('name').value;
+            const output = document.getElementById('lname9');
+            output.textContent = inputText;
+            const inputText1 = document.getElementById('cname').value;
+            const output1 = document.getElementById('lname10');
+            output1.textContent = inputText1;
+            const inputText2 = document.getElementById('lname').value;
+            const output2 = document.getElementById('lname11');
+            output2.textContent = inputText2;
+        }
+    </script>
+    <style>
+    #image-display {
+      width: 100px;
+      height: 100px;
+      /* margin-left: 130px; */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    #img2
+        {
+            width: 100px;
+      height: 100px;
+      /* margin-left: 130px; */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+            margin-left: 15px;
+            margin-top: 50px;
+            border-radius: 30px;
+        }
+        #d1
+        {
+            height:70vh;
+            background-color:  #4047F0;
+            width: 110vh;
+            display: grid;
+            grid-template-rows: 0.6fr 6fr;
+            border: 1px solid black;
+
+        }
+        #d2
+        {
+            background-color: aliceblue;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            
+        }
+        #d3
+        {
+            
+            border: 1px solid black;
+            display: grid;
+            grid-template-rows: repeat(5,1fr) 1.8fr 0.4fr;
+        }
+        #d3 > *
+        {
+            
+            text-align: center;
+        }
+        #d4
+        {
+            display: grid;
+            grid-template-rows: 1fr 2.2fr 1fr;
+            border: 1px solid black;
+        }
+        #d6 
+        {
+            position: relative;
+        }
+        #d7
+        {
+            position: relative;
+        }
+        #d8
+        {
+            position: relative;
+        }
+       
+        
+        /* div 
+        {
+            border:1px solid black;
+        } */
+
+        #p1
+        {
+            font-size: 20px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: aliceblue;
+        }
+        #p2
+        {
+            font-size: 20px;
+            color: #4047F0;
+        }
+
+        .input
+        {
+            border-radius: 8px;
+            height: 20px;
+            margin-top: 5px;
+        }
+        #file-input
+        {
+            margin-left: 90px;
+            margin-top: 10px;
+        }
+        #d12
+        {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            border-radius: 10px;
+            margin: 20px;
+            background-color: rgb(214, 230, 243);
+            box-shadow: 3px 5px #888888;
+            
+        }
+        #d10
+        {
+            padding-left: 130px;
+        }
+        #d14
+        {
+            background-color: #666bf6;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background-image: linear-gradient(lightblue,darkblue);
+        }
+        #d15
+        {
+            display: grid;
+            margin-left: 10px;
+        }
+        #d16
+        {
+            margin-top: 30px;
+        }
+        .labels
+        {
+            position: absolute;
+            top: 57%;
+            left: 100px;
+            transform: translateY(-50%);
+        }
+        .input
+        {
+            padding-left: 30px;
+        }
+        #lname6,#lname7,#lname8
+        {
+            color: #8f92ef;
+        }
+        #generate-button
+        {
+            background-color: #5358f8;
+            border-radius: 5px;
+            color: aliceblue;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <p id="p1">ID CARD GENERATOR</p>
+        <div id="d2">
+            <div id="d3">
+                <div id="d5">
+                    <p id="p2">Enter Student Details</p>
+                </div>
+                <div id="d6">
+                    <label id="lname1">Enter name:</label><br/>
+                    <label class="labels"><i class="fas fa-user"></i></label><input class="input" id="name" type="text">
+                </div>
+                <div id="d7">
+                    <label id="lname2">Enter College Name:</label><br/>
+                    <label class="labels"> <i class="icon fa-solid fa-building-columns"></i></i></label><input class="input" id="cname" type="text">
+                </div>
+                <div id="d8">
+                    <label id="lname3">Enter Location:</label><br/>
+                    <label class="labels"> <i class="icon fa-sharp fa-solid fa-location-dot"></i></label><input class="input" id="lname" type="text">
+                </div>
+                <div id="d9">
+                    <label id="lname4">Enter students Picture:</lable>
+                    <input type="file" id="file-input" accept="image/*">
+                    
+                  
+                    <script>
+                        
+                      function displayImage(event) {
+                        var input = event.target;
+                        var reader = new FileReader();
+                  
+                        reader.onload = function () {
+                          var dataURL = reader.result;
+                          var imageDisplay = document.getElementById('image-display');
+                          imageDisplay.style.backgroundImage = "url('" + dataURL + "')";
+                        };
+                  
+                        reader.readAsDataURL(input.files[0]);
+                      }
+                  
+                      var fileInput = document.getElementById('file-input');
+                      fileInput.addEventListener('change', displayImage);
+                    </script>
+                </div>
+                <div id="d10">
+                    <div id="image-display"></div>
+                    
+                </div>
+                <div id="generate-button-division">
+                    <button onclick="display1()"  id="generate-button">Generate Card</button>
+                    
+                </div>
+            </div>
+            <div id="d4">
+                <div id="d11">
+
+                </div>
+                <div id="d12">
+                    <div id="d14">
+                        <div id="img2" >
+
+                        </div>
+                        
+
+                    </div>
+                    <div id="d15">
+                        <div id="d16">
+                            <label id="lname6">Name        :</label><label id="lname9">Name:</label>
+                        </div>
+                        <div id="d17">
+                            <label id="lname7">College Name:</label><label id="lname10">Name:</label>
+                        </div>
+                        <div id="d18">
+                            <label id="lname8">Location    :</label><label id="lname11">Name:</label>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div id="d13">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
